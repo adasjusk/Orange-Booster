@@ -6,5 +6,9 @@ It is meant to streamline debloat with tweaks, troubleshoot Drivers
 keep this project clean and efficient.                                  
 Drag This Folder to Desktop or it will not work!                             
 -------------------------------------------------------
-![image](https://github.com/adasjusk/winboost/assets/100019532/4c14e3de-cc18-4c9e-8f87-f64
 
+
+![image](https://github.com/adasjusk/winboost/assets/100019532/59bd1d70-cc34-41a4-9c22-e3bf8afb2763)
+
+
+https://drive.google.com/drive/folders/1514-ORvpD1_pNno351sPvYOnLpccn5er?usp=drive_link
