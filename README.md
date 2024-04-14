@@ -4,7 +4,8 @@ keep this project clean and efficient.
 Drag This Folder to Desktop or it will not work!
 Only For Windows 10/11
 ---------------------------------------------------------------------------------------
-![image](https://github.com/adasjusk/winboost/assets/100019532/59bd1d70-cc34-41a4-9c22-e3bf8afb2763)
+![image](https://github.com/adasjusk/Orange-Booster/assets/100019532/2ffa3fa9-08e2-43c7-8031-bcdfac2fc9f6)
+
 
 
 ---------------------------------------------------
