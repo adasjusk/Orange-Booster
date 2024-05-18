@@ -25,10 +25,8 @@ irm https://theadastech.run.place/get.ps1 | iex
 -   That's all.
 </br>
 
-```
 Latest Version: 4.0
 Release date: 18-MAY-2024
-```
 ---
 
 <p align="center">Made with Love ❤️</p>
