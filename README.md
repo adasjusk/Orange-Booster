@@ -1,3 +1,4 @@
+USE IT AS YOUR OWN RISK !!!
 This Booster is a compilation of Windows tasks I perform on each Windows system I use.           
 It is meant to streamline debloat with tweaks, troubleshoot Drivers                       
 keep this project clean and efficient.                                  
