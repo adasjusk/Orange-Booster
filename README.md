@@ -5,7 +5,8 @@ It is meant to streamline debloat with tweaks, troubleshoot Drivers
 keep this project clean and efficient.
 Only For Windows 10/11
 ---
-![image](https://github.com/adasjusk/Orange-Booster/assets/100019532/2ffa3fa9-08e2-43c7-8031-bcdfac2fc9f6)
+![image](https://github.com/adasjusk/Orange-Booster/assets/100019532/e1192f0a-9e91-4372-8c05-2b474f7f6151)
+
 
 ## Download / How to use it?
 
