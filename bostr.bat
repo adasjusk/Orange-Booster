@@ -7,7 +7,7 @@ title Orange Booster
 :menu 
 cls
 echo +-------------------------------------------+
-echo +             Ornage Booster                +
+echo +             Orange Booster                +
 echo +-------------------------------------------+
 echo +              Settings Booster             +
 echo +-------------------------------------------+
