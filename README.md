@@ -18,7 +18,7 @@ Only For Windows 10/11
 ```
 irm https://theadastech.run.place/get.ps1 | iex
 ```
-##Or 
+###Or 
 ```
 irm https://raw.githubusercontent.com/adasjusk/Orange-Booster/main/get.ps1 | iex
 ``` 
