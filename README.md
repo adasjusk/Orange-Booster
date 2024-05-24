@@ -17,7 +17,11 @@ Only For Windows 10/11
 -   Copy and paste the code below and press enter  
 ```
 irm https://theadastech.run.place/get.ps1 | iex
-```  
+```
+##Or 
+```
+irm https://raw.githubusercontent.com/adasjusk/Orange-Booster/main/get.ps1 | iex
+``` 
 -   That's all. 
 
 ### Method 2 - Traditional
