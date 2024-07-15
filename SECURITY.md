@@ -10,7 +10,7 @@ currently being supported with security updates.
 | Preview | :white_check_mark: |
 | Beta    | :white_check_mark: |
 | Main    | :white_check_mark: |
-| Web     | :white_check_mark: |
+| Web Ver.| :white_check_mark: |
 | Prebeta | :x:                |
 | Base    | :x:                |
 | S Code  | :x:                |
