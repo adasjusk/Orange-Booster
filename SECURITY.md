@@ -27,6 +27,14 @@ currently being supported with security updates.
 ### Beta - Beta Version For Testers, but stabler than preview
 ### Preview - Preview Is Early State Of The Program
 
+## Color Of The Version For The Program
+
+| Version | Color              |
+| ------- | ------------------ |
+| Preview | :blue_square:      |
+| Beta    | :red_square:       |
+| Main    | :green_square:     |
+
 # Reporting a Bug
 
 How to report a vulnerability?
