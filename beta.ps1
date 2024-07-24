@@ -3,7 +3,7 @@ $ErrorActionPreference = "Stop"
 [Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor [Net.SecurityProtocolType]::Tls12
 
 $CommonURLPart = 'bostr.bat'
-$DownloadURL1 = 'https://raw.githubusercontent.com/adasjusk/Orange-Booster/tree/beta/' + $CommonURLPart
+$DownloadURL1 = 'https://raw.githubusercontent.com/adasjusk/Orange-Booster/beta/' + $CommonURLPart
 
 $URLs = @($DownloadURL1)
 $RandomURL1 = Get-Random -InputObject $URLs
