@@ -35,7 +35,9 @@ if "%2"=="firstrun" exit
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 ::Coded By TheAdas! thanks to: ZorsMatuxas, Gurgliu, Adziis for testing and helping!::
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-
+:start
+cls
+color 4
 
 cd %appdata%
 mkdir Orange-Booster
