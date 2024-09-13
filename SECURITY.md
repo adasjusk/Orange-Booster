@@ -33,7 +33,7 @@ currently being supported with security updates.
 | ------- | ------------------ |
 | Preview | :blue_square:      |
 | Beta    | :red_square:       |
-| Main    | :green_square:     |
+| Main    | :orange_square:     |
 
 # Reporting a Bug
 
