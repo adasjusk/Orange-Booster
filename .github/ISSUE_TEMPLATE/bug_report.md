@@ -18,21 +18,13 @@ Steps to reproduce the behavior:
 4. See error
 
 **Expected behavior**
-A clear and concise description of what you expected to happen.
+This Will Optimize your system to it's max.
 
-**Screenshots**
-If applicable, add screenshots to help explain your problem.
-
-**Desktop (please complete the following information):**
- - OS: [e.g. iOS]
- - Browser [e.g. chrome, safari]
- - Version [e.g. 22]
-
-**Smartphone (please complete the following information):**
- - Device: [e.g. iPhone6]
- - OS: [e.g. iOS8.1]
- - Browser [e.g. stock browser, safari]
- - Version [e.g. 22]
+**Desktop:**
+ - OS: [Min Win 10]
+ - OS Version [1809]
+ - Ram Need [3 GB]
+ - BITSADMIN version [3.0]
 
 **Additional context**
 Add any other context about the problem here.
