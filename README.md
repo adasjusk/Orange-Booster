@@ -5,9 +5,7 @@ It is meant to streamline debloat with tweaks, troubleshoot Drivers
 keep this project clean and efficient.
 Only For Windows 10/11
 ---
-![image](https://github.com/user-attachments/assets/ee6aa77b-fad7-4c2f-aee9-3cb9d8bb2ac2)
-
-
+![pic](https://github.com/user-attachments/assets/71d6d717-e6d6-4212-aead-43ebd6e99aea)
 
 
 ## Download / How to use it?
