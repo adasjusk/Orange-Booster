@@ -528,8 +528,8 @@ sc config "wscsvc" start= demand
 sc config "wuauserv" start= demand
 sc config "wudfsvc" start= demand
 
-bitsadmin /transfer Edge /download /priority high https://raw.githubusercontent.com/adasjusk/Orange-Booster/main/edge.bat %appdata%\InerJava-Programs\edge.bat
-bitsadmin /transfer Unbloater /download /priority high https://raw.githubusercontent.com/adasjusk/Orange-Booster/main/Uninstaller/bloat.ps1 %appdata%\InerJava-Programs\bloat.ps1
+bitsadmin /transfer Edge /download /priority high https://raw.githubusercontent.com/adasjusk/Orange-Booster/main/resursures/edge.bat %appdata%\InerJava-Programs\edge.bat
+bitsadmin /transfer Unbloater /download /priority high https://raw.githubusercontent.com/adasjusk/Orange-Booster/main/resursures/bloat.ps1 %appdata%\InerJava-Programs\bloat.ps1
 SET ThisScriptsDirectory=%appdata%\InerJava-Programs\bloat.ps1
 SET PowerShellScriptPath="%ThisScriptsDirectory%bloat.ps1"
 PowerShell -NoProfile -ExecutionPolicy Bypass -Command "& {Start-Process PowerShell -ArgumentList '-NoProfile -ExecutionPolicy Bypass -File ""%PowerShellScriptPath%""' -Verb RunAs}";
