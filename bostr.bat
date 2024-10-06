@@ -22,7 +22,7 @@ cmd /c "%0" skipuac firstrun
 cd /d %~dp0
 :skipuacstart
 if "%2"=="firstrun" exit
-
+chcp 65001 >null
 echo ╔═════════════════════════╗
 echo ║ Entered Admin Mode ...  ║
 echo ╚═════════════════════════╝
