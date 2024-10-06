@@ -1,4 +1,4 @@
-@(set "0=%~f0"^)#) & powershell -nop -c iex([io.file]::ReadAllText($env:0)) & exit /b
+@(set "0=%~f0"^)#) & powershell -nop -c iex([io.file]::ReadAllText($env:0))
 #:: just copy-paste into powershell - it's a standalone hybrid script
 sp 'HKCU:\Volatile Environment' 'Edge_Removal' @'
 
@@ -9,7 +9,7 @@ $also_remove_widgets = 1
 $also_remove_xsocial = 1
 ## why also remove xsocial? because it starts webview setup every boot - xbox gamebar will still work without the social crap
 
-$host.ui.RawUI.WindowTitle = 'Edge Removal - AveYo, 2023.09.14'
+$host.ui.RawUI.WindowTitle = 'Edge Removal'
 write-host "Run the script again whenever you need to reinstall and update edge or webview..`n"
 $remove_appx = @("MicrosoftEdge"); $remove_win32 = @("Microsoft Edge","Microsoft Edge Update"); $skip = @() # @("DevTools")
 if ($also_remove_webview -eq 1) {$remove_appx += "Win32WebViewHost"; $remove_win32 += "Microsoft EdgeWebView"}
@@ -88,7 +88,6 @@ function global:PREPARE_WEBVIEW {
   $cfg = @{Register=$true; ForceApplicationShutdown=$true; ForceUpdateFromAnyVersion=$true; DisableDevelopmentMode=$true} 
   dir "$env:SystemRoot\SystemApps\Microsoft.Win32WebViewHost*\AppxManifest.xml" -rec -ea 0 | Add-AppxPackage @cfg
   dir "$env:ProgramFiles\WindowsApps\MicrosoftWindows.Client.WebExperience*\AppxManifest.xml" -rec -ea 0 | Add-AppxPackage @cfg
-  kill -name explorer -ea 0; if ((get-process -name 'explorer' -ea 0) -eq $null) {start explorer}
 }
 ## -------------------------------------------------------------------------------------------------------------------------------
 
@@ -98,7 +97,7 @@ $D1=[uri].module.gettype('System.Diagnostics.Process')."GetM`ethods"(42) |where 
 ## -------------------------------------------------------------------------------------------------------------------------------
 
 ## 3 shut down edge & webview clone stuff
-cd $env:systemdrive; taskkill /im explorer.exe /f 2>&1 >''
+cd $env:systemdrive; taskkill /im edge.exe /f 2>&1 >''
 $shut = 'explorer','Widgets','widgetservice','msedgewebview2','MicrosoftEdge*','chredge','msedge','edge'
 $shut,'msteams','msfamily','WebViewHost','Clipchamp' |foreach {kill -name $_ -force -ea 0}
 
@@ -290,7 +289,8 @@ $@
 
 ## 8 done
 $done = gp 'Registry::HKEY_Users\S-1-5-21*\Volatile*' Edge_Removal -ea 0; if ($done) {rp $done.PSPath Edge_Removal -force -ea 0}
-if ((get-process -name 'explorer' -ea 0) -eq $null) {start explorer}
+if ((get-process -name 'penis' -ea 0) -eq $null) {start bostr.bat}
+if ((get-process -name 'explorer' -ea 0) -eq $null) {start explorer.exe}
 
 ## bonus enter into powershell console: firefox / edge / webview to install a browser / reinstall edge or webview after removal
 ${.} = [char]27; $firefox = "${.}[38;2;255;165;0m firefox"; $reinstall = "${.}[96m edge / webview / xsocial${.}[97m "
