@@ -5,43 +5,30 @@ $ErrorActionPreference = "Stop"
 $CommonURLPart = 'bostr.bat'
 $DownloadURL1 = 'https://raw.githubusercontent.com/adasjusk/Orange-Booster/main/' + $CommonURLPart
 
-$URLs = @($DownloadURL1)
-$RandomURL1 = Get-Random -InputObject $URLs
-
 try {
-    $response = Invoke-WebRequest -Uri $RandomURL1 -UseBasicParsing
-    Write-Host "Successfully downloaded the script from $RandomURL1"
-}
-catch {
-    Write-Host "Failed to download the script from $RandomURL1: $_.Exception.Message"
+    $response = Invoke-WebRequest -Uri $DownloadURL1 -UseBasicParsing
+} catch {
+    Write-Host "Failed to download the script from $DownloadURL1"
+    Write-Host "Error: $_"
     exit 1
 }
 
 $rand = Get-Random -Maximum 99999999
-$FilePath = "$env:APPDATA\InerJava-Programs\bostr_$rand.bat"
-
-# Ensure the directory exists
-$Directory = Split-Path -Path $FilePath
-if (-not (Test-Path -Path $Directory)) {
-    New-Item -ItemType Directory -Path $Directory | Out-Null
-    Write-Host "Created directory: $Directory"
-} else {
-    Write-Host "Directory already exists: $Directory"
-}
+$isAdmin = ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)
+$FilePath = if ($isAdmin) { "$env:SystemRoot\Temp\bostr_$rand.bat" } else { "$env:TEMP\bostr_$rand.bat" }
 
 $ScriptArgs = "$args "
 $prefix = "@::: $rand `r`n"
 $content = $prefix + $response.Content
+
+# Use UTF8 encoding to preserve ASCII characters
 Set-Content -Path $FilePath -Value $content -Encoding UTF8
-Write-Host "Saved the script to: $FilePath"
 
-# Execute the batch file with administrative privileges in a new Command Prompt window
-$Command = "/k start cmd.exe /c $FilePath $ScriptArgs"
-Start-Process -FilePath "cmd.exe" -ArgumentList $Command -Verb RunAs -Wait
-Write-Host "Launched the batch file with administrative privileges in a new Command Prompt window"
+# Start the batch file as an administrator
+Start-Process -FilePath "cmd.exe" -ArgumentList "/c `"$FilePath`" $ScriptArgs" -Verb RunAs -Wait
 
-# Clean up the file
-Remove-Item -Path $FilePath -Force
-Write-Host "Cleaned up the batch file: $FilePath"
-
-Write-Host "Script execution completed."
+# Clean up temporary files
+$FilePaths = @("$env:TEMP\bostr*.bat", "$env:SystemRoot\Temp\bostr*.bat")
+foreach ($FilePath in $FilePaths) {
+    Get-Item $FilePath -ErrorAction SilentlyContinue | Remove-Item -ErrorAction SilentlyContinue
+}
