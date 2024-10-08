@@ -10,6 +10,8 @@ $RandomURL1 = Get-Random -InputObject $URLs
 
 try {
     $response = Invoke-WebRequest -Uri $RandomURL1 -UseBasicParsing
+    # Set the encoding to UTF-8
+    $response.Content = [System.Text.Encoding]::UTF8.GetString($response.RawContent)
 }
 catch {
     Write-Host "Failed to download the script from $RandomURL1"
@@ -27,11 +29,8 @@ if (-not (Test-Path -Path $Directory)) {
 
 $ScriptArgs = "$args "
 $prefix = "@::: $rand `r`n"
-$content = $prefix + $response
-Set-Content -Path $FilePath -Value $content
+$content = $prefix + $response.Content
+Set-Content -Path $FilePath -Value $content -Encoding UTF8
 
-# Set the code page to 65001 (UTF-8)
-chcp 65001
-
+# Execute the batch file with administrative privileges
 Start-Process -FilePath "cmd.exe" -ArgumentList "/c $FilePath $ScriptArgs" -Verb RunAs -Wait
-
