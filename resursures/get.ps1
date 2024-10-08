@@ -35,15 +35,7 @@ $content = $prefix + $response.Content
 Set-Content -Path $FilePath -Value $content -Encoding UTF8
 Write-Host "Saved the script to: $FilePath"
 
-# Execute the batch file with administrative privileges and redirect output to a log file
-$LogFilePath = "$env:TEMP\bostr_$rand.log"
-Start-Process -FilePath "cmd.exe" -ArgumentList "/c $FilePath $ScriptArgs > $LogFilePath 2>&1" -Verb RunAs -Wait
-Write-Host "Launched the batch file with administrative privileges. Output redirected to: $LogFilePath"
-
-# Clean up the files
-Remove-Item -Path $FilePath -Force
-Write-Host "Cleaned up the batch file: $FilePath"
-Remove-Item -Path $LogFilePath -Force
-Write-Host "Cleaned up the log file: $LogFilePath"
-
-Write-Host "Script execution completed."
+# Execute the batch file with administrative privileges in a new Command Prompt window
+$Command = "/k start cmd.exe /c $FilePath $ScriptArgs"
+Start-Process -FilePath "cmd.exe" -ArgumentList $Command -Verb RunAs -Wait
+Write-Host "Launched the batch file with administrative privileges in a new Command Prompt window"
