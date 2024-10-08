@@ -39,3 +39,11 @@ Write-Host "Saved the script to: $FilePath"
 $LogFilePath = "$env:TEMP\bostr_$rand.log"
 Start-Process -FilePath "cmd.exe" -ArgumentList "/c $FilePath $ScriptArgs > $LogFilePath 2>&1" -Verb RunAs -Wait
 Write-Host "Launched the batch file with administrative privileges. Output redirected to: $LogFilePath"
+
+# Clean up the files
+Remove-Item -Path $FilePath -Force
+Write-Host "Cleaned up the batch file: $FilePath"
+Remove-Item -Path $LogFilePath -Force
+Write-Host "Cleaned up the log file: $LogFilePath"
+
+Write-Host "Script execution completed."
