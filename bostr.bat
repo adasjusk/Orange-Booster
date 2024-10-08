@@ -1,5 +1,5 @@
 @echo off
-chcp 65001 >null
+chcp 65001
 if "%2"=="firstrun" exit
 cmd /c "%0" null firstrun
 if "%1"=="skipuac" goto skipuacstart
@@ -22,7 +22,7 @@ cmd /c "%0" skipuac firstrun
 cd /d %~dp0
 :skipuacstart
 if "%2"=="firstrun" exit
-
+chcp 65001
 echo ╔═════════════════════════╗
 echo ║ Entered Admin Mode ...  ║
 echo ╚═════════════════════════╝
