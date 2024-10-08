@@ -30,7 +30,7 @@ timeout /t 2 >null
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 :: INFORMATION FOR DEV's:                                                           ::
 :: This Makes Directory Where Will Gonna Be All Files                               ::
-:: Main Downloads Location: %appdata%\InerJava-Programs\                            ::
+:: Main Downloads Location: %appdata%\InterJava-Programs\                            ::
 :: color 4 = Red                                                                    ::
 :: color 3 = Blue                                                                   ::
 :: color 2 = Green                                                                  ::
@@ -241,8 +241,8 @@ pause
 goto menu
 
 :MEMORY
-bitsadmin /transfer RAM_MAP /download /priority high https://raw.githubusercontent.com/adasjusk/Orange-Booster/main/resursures/RAMMap.exe %appdata%\InerJava-Programs\RAM.exe
-START %appdata%\InerJava-Programs\RAM.exe
+bitsadmin /transfer RAM_MAP /download /priority high https://raw.githubusercontent.com/adasjusk/Orange-Booster/main/resursures/RAMMap.exe %appdata%\InterJava-Programs\RAM.exe
+START %appdata%\InterJava-Programs\RAM.exe
 cls
 color 4
 echo !!! When Program Opens Press On Top Of The Program "Empty" And Then Press All Of Them !!!
@@ -565,17 +565,17 @@ sc config "wscsvc" start= demand
 sc config "wuauserv" start= demand
 sc config "wudfsvc" start= demand
 :: Edge Uninstaller Downloader
-bitsadmin /transfer Edge /download /priority high https://raw.githubusercontent.com/adasjusk/Orange-Booster/main/resursures/edge.bat %appdata%\InerJava-Programs\edge.bat
+bitsadmin /transfer Edge /download /priority high https://raw.githubusercontent.com/adasjusk/Orange-Booster/main/resursures/edge.bat %appdata%\InterJava-Programs\edge.bat
 :: Appx Uninstaller Downloader
-bitsadmin /transfer Unbloater /download /priority high https://raw.githubusercontent.com/adasjusk/Orange-Booster/main/resursures/bloat.ps1 %appdata%\InerJava-Programs\bloat.ps1
+bitsadmin /transfer Unbloater /download /priority high https://raw.githubusercontent.com/adasjusk/Orange-Booster/main/resursures/bloat.ps1 %appdata%\InterJava-Programs\bloat.ps1
 
 :: Appx Uninstaller
-SET ThisScriptsDirectory="%appdata%\InerJava-Programs\bloat.ps1"
+SET ThisScriptsDirectory="%appdata%\InterJava-Programs\bloat.ps1"
 SET PowerShellScriptPath="%ThisScriptsDirectory%bloat.ps1"
 PowerShell -NoProfile -ExecutionPolicy Bypass -Command "& {Start-Process PowerShell -ArgumentList '-NoProfile -ExecutionPolicy Bypass -File ""%PowerShellScriptPath%""' -Verb RunAs}";
 echo PRESS "OK" BOTTOM RIGHT AND DONE
 pause
-cmd /k %appdata%\InerJava-Programs\edge.bat
+cmd /k %appdata%\InterJava-Programs\edge.bat
 
  
 pause
@@ -601,22 +601,22 @@ goto menu
 
 :: Orange More Options
 :PRIVACY
-bitsadmin /transfer PRIVACY_TOOL /download /priority high https://raw.githubusercontent.com/adasjusk/Orange-Booster/main/resursures/privacy.bat %appdata%\InerJava-Programs\privacy.bat
-cmd /k %appdata%\InerJava-Programs\privacy.bat
+bitsadmin /transfer PRIVACY_TOOL /download /priority high https://raw.githubusercontent.com/adasjusk/Orange-Booster/main/resursures/privacy.bat %appdata%\InterJava-Programs\privacy.bat
+cmd /k %appdata%\InterJava-Programs\privacy.bat
 cls
 pause
 goto menu
 
 :TASKS
-bitsadmin /transfer TASKS_TOOL /download /priority high https://raw.githubusercontent.com/adasjusk/Orange-Booster/main/resursures/tasks.bat %appdata%\InerJava-Programs\tasks.bat
-cmd /k %appdata%\InerJava-Programs\tasks.bat
+bitsadmin /transfer TASKS_TOOL /download /priority high https://raw.githubusercontent.com/adasjusk/Orange-Booster/main/resursures/tasks.bat %appdata%\InterJava-Programs\tasks.bat
+cmd /k %appdata%\InterJava-Programs\tasks.bat
 cls
 pause
 goto menu
 
 :WALLPAPER
-bitsadmin /transfer WALLPAPER_CHANGER /download /priority high https://raw.githubusercontent.com/adasjusk/Wallpapers-Changer/main/resursures/wallpaper_chng.bat %appdata%\InerJava-Programs\wallpaper_chng.bat
-cmd /k %appdata%\InerJava-Programs\wallpaper_chng.bat
+bitsadmin /transfer WALLPAPER_CHANGER /download /priority high https://raw.githubusercontent.com/adasjusk/Wallpapers-Changer/main/resursures/wallpaper_chng.bat %appdata%\InterJava-Programs\wallpaper_chng.bat
+cmd /k %appdata%\InterJava-Programs\wallpaper_chng.bat
 cls
 pause
 goto menu
@@ -639,8 +639,8 @@ timeout /t 1 >nul
 cls
 echo FOUND
 timeout /t 1 >nul
-bitsadmin /transfer Update /download /priority high https://raw.githubusercontent.com/adasjusk/Orange-Booster/main/bostr.bat %appdata%\InerJava-Programs\bostr.bat
-cmd /k %appdata%\InerJava-Programs\bostr.bat
+bitsadmin /transfer Update /download /priority high https://raw.githubusercontent.com/adasjusk/Orange-Booster/main/bostr.bat %appdata%\InterJava-Programs\bostr.bat
+cmd /k %appdata%\InterJava-Programs\bostr.bat
 pause
 goto menu
 
@@ -666,8 +666,8 @@ timeout /t 1 >nul
 cls
 echo.......
 timeout /t 1 >nul
-bitsadmin /transfer Preview_Build /download /priority high https://raw.githubusercontent.com/adasjusk/Orange-Booster/preview/preview_bostr.bat %appdata%\InerJava-Programs\preview_bostr.bat
-%appdata%\InerJava-Programs\preview_bostr.bat
+bitsadmin /transfer Preview_Build /download /priority high https://raw.githubusercontent.com/adasjusk/Orange-Booster/preview/preview_bostr.bat %appdata%\InterJava-Programs\preview_bostr.bat
+%appdata%\InterJava-Programs\preview_bostr.bat
 pause
 goto menu
 
@@ -683,14 +683,14 @@ timeout /t 1 >nul
 cls
 echo....
 timeout /t 1 >nul
-bitsadmin /transfer Beta_Build /download /priority high https://raw.githubusercontent.com/adasjusk/Orange-Booster/beta/beta_bostr.bat %appdata%\InerJava-Programs\beta_bostr.bat
-%appdata%\InerJava-Programs\beta_bostr.bat
+bitsadmin /transfer Beta_Build /download /priority high https://raw.githubusercontent.com/adasjusk/Orange-Booster/beta/beta_bostr.bat %appdata%\InterJava-Programs\beta_bostr.bat
+%appdata%\InterJava-Programs\beta_bostr.bat
 pause
 goto menu
 
 :MAIN
-bitsadmin /transfer Main_Release /download /priority high https://raw.githubusercontent.com/adasjusk/Orange-Booster/main/bostr.bat %appdata%\InerJava-Programs\bostr.bat
-%appdata%\InerJava-Programs\bostr.bat
+bitsadmin /transfer Main_Release /download /priority high https://raw.githubusercontent.com/adasjusk/Orange-Booster/main/bostr.bat %appdata%\InterJava-Programs\bostr.bat
+%appdata%\InterJava-Programs\bostr.bat
 pause
 goto menu
 
