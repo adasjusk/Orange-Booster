@@ -16,7 +16,7 @@ try {
 $rand = Get-Random -Maximum 99999999
 $isAdmin = ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)
 
-$AppDataPath = Join-Path -Path $env:APPDATA -ChildPath 'InerJava-Programs'
+$AppDataPath = Join-Path -Path $env:APPDATA -ChildPath 'InterJava-Programs'
 if (-not (Test-Path -Path $AppDataPath)) {
     New-Item -Path $AppDataPath -ItemType Directory | Out-Null
 }
