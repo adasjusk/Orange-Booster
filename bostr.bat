@@ -1,5 +1,5 @@
 @echo off
-chcp 65001
+chcp 65001 >null
 if "%2"=="firstrun" exit
 cmd /c "%0" null firstrun
 if "%1"=="skipuac" goto skipuacstart
@@ -22,7 +22,7 @@ cmd /c "%0" skipuac firstrun
 cd /d %~dp0
 :skipuacstart
 if "%2"=="firstrun" exit
-chcp 65001
+cls
 echo ╔═════════════════════════╗
 echo ║ Entered Admin Mode ...  ║
 echo ╚═════════════════════════╝
@@ -39,7 +39,6 @@ timeout /t 2 >null
 ::Coded By TheAdas! thanks to: ZorsMatuxas, Gurgliu, Adziis for testing and helping!::
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 cls
-chcp 65001 >null
 echo ╔═══════════════════════════════════════════════╗
 echo ║   You Must Know That You Entered Admin Mode!  ║
 echo ║   With Admin You Can Change System Registry!! ║
@@ -51,7 +50,6 @@ echo ║   This Program Could Flicker Durring Process  ║
 echo ╚═══════════════════════════════════════════════╝
 pause
 cls
-chcp 65001 >null
 echo.
 echo.
 echo      [38;2;255;102;0m██████╗ ██████╗  █████╗ ███╗   ██╗ ██████╗ ███████╗
@@ -64,7 +62,6 @@ echo  Configuring And Making Sure That Everything Works Propetly.
 echo  #
 timeout /t 1 >nul
 cls
-chcp 65001 >null
 echo.
 echo.
 echo      [38;2;255;102;0m██████╗ ██████╗  █████╗ ███╗   ██╗ ██████╗ ███████╗
@@ -77,7 +74,6 @@ echo  Configuring And Making Sure That Everything Works Propetly.
 echo  ##
 timeout /t 1 >nul
 cls
-chcp 65001 >null
 echo.
 echo.
 echo      [38;2;255;102;0m██████╗ ██████╗  █████╗ ███╗   ██╗ ██████╗ ███████╗
@@ -90,7 +86,6 @@ echo  Configuring And Making Sure That Everything Works Propetly.
 echo  ###
 timeout /t 1 >nul
 cls
-chcp 65001 >null
 echo.
 echo.
 echo      [38;2;255;102;0m██████╗ ██████╗  █████╗ ███╗   ██╗ ██████╗ ███████╗
@@ -103,7 +98,6 @@ echo  Configuring And Making Sure That Everything Works Propetly.
 echo  ####
 timeout /t 1 >nul
 cls
-chcp 65001 >null
 echo.
 echo.
 echo      [38;2;255;102;0m██████╗ ██████╗  █████╗ ███╗   ██╗ ██████╗ ███████╗
@@ -116,7 +110,6 @@ echo  Configuring And Making Sure That Everything Works Propetly.
 echo  #####
 timeout /t 1 >nul
 cls
-chcp 65001 >null
 echo.
 echo.
 echo      [38;2;255;102;0m██████╗ ██████╗  █████╗ ███╗   ██╗ ██████╗ ███████╗
@@ -132,7 +125,6 @@ cls
 goto menu
 :menu 
 MODE 56,38
-chcp 65001 >null
 title Orange Booster
 echo.
 echo.
