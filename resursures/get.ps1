@@ -10,11 +10,10 @@ $RandomURL1 = Get-Random -InputObject $URLs
 
 try {
     $response = Invoke-WebRequest -Uri $RandomURL1 -UseBasicParsing
-    # Set the encoding to UTF-8
-    $response.Content = [System.Text.Encoding]::UTF8.GetString($response.RawContent)
+    Write-Host "Successfully downloaded the script from $RandomURL1"
 }
 catch {
-    Write-Host "Failed to download the script from $RandomURL1"
+    Write-Host "Failed to download the script from $RandomURL1: $_"
     exit 1
 }
 
@@ -25,12 +24,18 @@ $FilePath = "$env:APPDATA\InerJava-Programs\bostr_$rand.bat"
 $Directory = Split-Path -Path $FilePath
 if (-not (Test-Path -Path $Directory)) {
     New-Item -ItemType Directory -Path $Directory | Out-Null
+    Write-Host "Created directory: $Directory"
+} else {
+    Write-Host "Directory already exists: $Directory"
 }
 
 $ScriptArgs = "$args "
 $prefix = "@::: $rand `r`n"
 $content = $prefix + $response.Content
 Set-Content -Path $FilePath -Value $content -Encoding UTF8
+Write-Host "Saved the script to: $FilePath"
 
-# Execute the batch file with administrative privileges
-Start-Process -FilePath "cmd.exe" -ArgumentList "/c $FilePath $ScriptArgs" -Verb RunAs -Wait
+# Execute the batch file with administrative privileges and redirect output to a log file
+$LogFilePath = "$env:TEMP\bostr_$rand.log"
+Start-Process -FilePath "cmd.exe" -ArgumentList "/c $FilePath $ScriptArgs > $LogFilePath 2>&1" -Verb RunAs -Wait
+Write-Host "Launched the batch file with administrative privileges. Output redirected to: $LogFilePath"
