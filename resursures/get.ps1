@@ -30,4 +30,8 @@ $prefix = "@::: $rand `r`n"
 $content = $prefix + $response
 Set-Content -Path $FilePath -Value $content
 
+# Set the code page to 65001 (UTF-8)
+chcp 65001
+
 Start-Process -FilePath "cmd.exe" -ArgumentList "/c $FilePath $ScriptArgs" -Verb RunAs -Wait
+
