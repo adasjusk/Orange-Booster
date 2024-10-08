@@ -26,8 +26,8 @@ irm https://raw.githubusercontent.com/adasjusk/Orange-Booster/main/get.ps1 | iex
 -   That's all.
 </br>
 
-Latest Version: 4.0
-Release date: 18-MAY-2024
+Latest Version: 6.0
+Release date: 2024-10-8
 ---
 
 <p align="center">Made with Love ❤️</p>
