@@ -1,6 +1,6 @@
 # Legacy Build 🛠
 
-Download [Here](https://github.com/adasjusk/Orange-Booster/legacy/)
+Download [Here](https://github.com/adasjusk/Orange-Booster/blob/legacy/bostr.bat)
 
 ### This Is Old Version Of Orange Booster.
 ### This Legacy Version Updates Are 1 Lower 
