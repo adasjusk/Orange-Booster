@@ -12,11 +12,5 @@ irm https://raw.githubusercontent.com/adasjusk/Orange-Booster/beta/beta.ps1 | ie
 -   Program Is Running Report Bugs in [Issues](https://github.com/adasjusk/Orange-Booster/issues). 
 </br>
 
-| Version | Color              |
-| ------- | ------------------ |
-| Preview | :blue_square:      |
-| Beta    | :red_square:       |
-| Main    | :orange_square:     |
-
 ## Bugs 🐛
 Report Bugs in [Issues](https://github.com/adasjusk/Orange-Booster/issues)
