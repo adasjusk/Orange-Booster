@@ -1,6 +1,9 @@
 # Legacy Build 🛠
 
-### USE IT AS YOUR OWN RISK ❗❗❗
+Download [Here](https://github.com/adasjusk/Orange-Booster/legacy/)
+
+### This Is Old Version Of Orange Booster.
+### This Legacy Version Updates Are 1 Lower 
 ### For Windows 10 & 11
 </br>
 
