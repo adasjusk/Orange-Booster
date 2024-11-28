@@ -1,7 +1,7 @@
 # Legacy Build 🛠
 
 ### USE IT AS YOUR OWN RISK ❗❗❗
-### For Windows 10 & 7
+### For Windows 10 & 11
 </br>
 
 ## Bugs 🐛
