@@ -1,8 +1,9 @@
-### Description
+# Description
 
-This Program Will Be Converted To GUI Program From CUI version aka bash. bash version : https://github.com/adasjusk/Orange-Booster/legacy
+ This Program Will Be GUI Program. bash version : https://github.com/adasjusk/Orange-Booster/legacy 
+ 
 This Booster is a compilation of Windows tasks I perform on each Windows system I use.           
-It is for debloating, increasing privacy and enabling some tweaks in this program           
+It's for debloating, increasing privacy and enabling some tweaks in this program           
 keep this project clean and efficient.
 Only For Windows 10/11
 ---
